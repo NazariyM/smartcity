@@ -78,34 +78,49 @@
 		width: calc(100% - 390px)
 		
 .table-wrapper
-	max-width: 1720px
-	margin: 30px auto 0
+	max-width: 1760px
+	margin: 0 auto
+	padding: 30px 0
 .event-table
-	display: table
-	table-layout: fixed
-	width: 100%
-	margin-left: -15px
 	font-size: 14px
-	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.04)
-	border-radius: 4px
-	background: #fff
 	overflow: hidden
+	line-height: 1.2
+	&__in
+		position: relative
+		padding-right: 40px
+		height: 640px
 	&__head
+		max-width: 1720px
+		display: table
+		table-layout: fixed
+		width: 100%
 		font-size: 13px
 		color: #000
+		border-radius: 4px 4px 0 0
 		background-color: #d9ff38
+		box-shadow: 0 5px 15px rgba(0, 0, 0, 0.04)
+		.event-table__cell
+			border-bottom: none
 	&__body
-		position: relative
-		height: 500px
+		display: table
+		table-layout: fixed
+		width: 100%
+		max-width: 1720px
+		box-shadow: 0 5px 15px rgba(0, 0, 0, 0.04)
+		border-radius: 4px
+		background: #fff
+		.event-table__cell
+			padding: 25px 0
 	&__row
 		display: table-row
-	&__row:not(:last-child)
-		border-bottom: 1px solid #F1F1F1
 	&__cell
 		display: table-cell
 		padding: 12px 0
 		vertical-align: middle
 		text-align: center
+		border-bottom: 1px solid #F1F1F1
+		&_font
+			font-size: 16px
 		&:nth-child(1)
 			width: 22%
 		&:nth-child(2)
@@ -131,8 +146,6 @@
 		&:nth-child(12)
 			width: 28%
 			
-	//&__font
-	//	font-size: 16px
 	a
 		display: block
 		color: #6a6a6a
