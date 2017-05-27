@@ -1,1 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 198.61"><defs><style>.cls-1{fill:#938c8f;}</style></defs><title>Ресурс 1</title><g id="Слой_2" data-name="Слой 2"><g id="Слой_1-2" data-name="Слой 1"><polygon class="cls-1" points="1920 198.61 1920 130 1265 130 1189 80 91.9 80 0 0 0 198.61 1920 198.61"/></g></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="160">
+    <g>
+        <g fill="#938c8f">
+            <polygon points="1920 198.61 1920 130 1265 130 1189 80 91.9 80 0 0 0 198.61 1920 198.61"/>
+        </g>
+    </g>
+</svg>
