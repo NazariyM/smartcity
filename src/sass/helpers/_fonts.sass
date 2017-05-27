@@ -1,0 +1,17 @@
++font("Century Gothic Regular", Century Gothic Regular)
++font("Century Gothic Bold", Century Gothic Bold)
+
+=f($name, $font-size: null, $line-height: null, $font-weight: null)
+	$font-family: null
+	@if $name == "cgr"
+		$font-family: "Century Gothic Regular"
+	@if $name == "cgb"
+		$font-family: "Century Gothic Bold"
+	font-family: $font-family, Arial, sans-serif
+	@if $font-family != null
+	@if $font-size != null
+		font-size: $font-size * 1px
+	@if $line-height != null
+		line-height: $line-height/$font-size
+	@if $font-weight != null
+		font-weight: $font-weight

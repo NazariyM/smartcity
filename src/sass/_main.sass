@@ -1,0 +1,141 @@
+.section
+	background-color: #fbfbfb
+	&__top
+		position: relative
+		min-height: 250px
+		height: 0
+		background: url(../img/bg/section_bg.png) 50% -4%/cover no-repeat
+		&::before, &::after
+			content: ''
+			position: absolute
+			bottom: 0
+			z-index: 1
+			background: #fbfbfb
+		&::before
+			right: 31%
+			transform: skewX(-56deg)
+			height: 50px
+			width: 130px
+		&::after
+			right: 0
+			height: 50px
+			width: 670px
+		&_color-1
+			background-color: #da2032
+		&_color-2
+			background-color: #00b5b4
+	&__container
+		height: 100%
+		&::before
+			content: ''
+			display: inline-block
+			vertical-align: middle
+			height: 100%
+	&__title
+		display: inline-block
+		vertical-align: middle
+		margin-top: -15px
+	&_has-decor
+		position: relative
+		&::after
+			position: absolute
+			left: -10px
+			right: -10px
+			bottom: 0
+			z-index: 1
+			height: 160px
+			background: url(../img/bg/section_decor-bot.svg) no-repeat top center/cover
+			content: ''
+	&_screen
+		height: 100vh
+		
+.event
+	display: flex
+	flex-direction: column
+	justify-content: center
+	height: calc(100vh - 250px)
+	min-height: 730px
+	&__in
+		margin-top: -80px
+	&__descr
+		max-width: 1500px
+		margin: 50px auto 0
+		text-align: center
+		font-size:  60px
+		line-height: (80/60)
+	&__title
+		font-size: 0
+	&__date
+		display: inline-block
+		vertical-align: bottom
+		width: 295px
+		margin-right: 95px
+		font-size: 55px
+		line-height: (80/60)
+	&__text
+		display: inline-block
+		vertical-align: bottom
+		width: calc(100% - 390px)
+		
+.table-wrapper
+	max-width: 1720px
+	margin: 30px auto 0
+.event-table
+	display: table
+	table-layout: fixed
+	width: 100%
+	margin-left: -15px
+	font-size: 14px
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.04)
+	border-radius: 4px
+	background: #fff
+	overflow: hidden
+	&__head
+		font-size: 13px
+		color: #000
+		background-color: #d9ff38
+	&__body
+		position: relative
+		height: 500px
+	&__row
+		display: table-row
+	&__row:not(:last-child)
+		border-bottom: 1px solid #F1F1F1
+	&__cell
+		display: table-cell
+		padding: 12px 0
+		vertical-align: middle
+		text-align: center
+		&:nth-child(1)
+			width: 22%
+		&:nth-child(2)
+			width: 20%
+		&:nth-child(3)
+			width: 24%
+		&:nth-child(4)
+			width: 39%
+		&:nth-child(5)
+			width: 28%
+		&:nth-child(6)
+			width: 32%
+		&:nth-child(7)
+			width: 20%
+		&:nth-child(8)
+			width: 22%
+		&:nth-child(9)
+			width: 37%
+		&:nth-child(10)
+			width: 26%
+		&:nth-child(11)
+			width: 15%
+		&:nth-child(12)
+			width: 28%
+			
+	//&__font
+	//	font-size: 16px
+	a
+		display: block
+		color: #6a6a6a
+		text-decoration: none
+	span
+		display: block
