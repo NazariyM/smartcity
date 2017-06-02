@@ -1,5 +1,6 @@
 +font("Century Gothic Regular", Century Gothic Regular)
 +font("Century Gothic Bold", Century Gothic Bold)
++font("Space Age Cyrillic Regular", Space Age Cyrillic Regular)
 
 =f($name, $font-size: null, $line-height: null, $font-weight: null)
 	$font-family: null
@@ -7,6 +8,8 @@
 		$font-family: "Century Gothic Regular"
 	@if $name == "cgb"
 		$font-family: "Century Gothic Bold"
+	@if $name == "sacr"
+		$font-family: "Space Age Cyrillic Regular"
 	font-family: $font-family, Arial, sans-serif
 	@if $font-family != null
 	@if $font-size != null

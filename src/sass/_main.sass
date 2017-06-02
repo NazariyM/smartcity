@@ -36,6 +36,107 @@
 		display: inline-block
 		vertical-align: middle
 		margin-top: -15px
+	&__triangle
+		&::before, &::after
+			position: absolute
+			left: -177px
+			z-index: 3
+			width: 0
+			height: 0
+			border-style: solid
+			content: ''
+		&::before
+			top: -175px
+			border-width: 280px 400px 390px 0
+			border-color: transparent #db1a2e transparent transparent
+			transform: rotate(35deg)
+		&::after
+			bottom: -305px
+			border-width: 450px 420px 420px 0
+			border-color: transparent #db1a2e transparent transparent
+			transform: rotate(-35deg)
+			
+	&__in
+		position: relative
+		height: 1080px
+		border-top: 11px solid #fff
+		border-bottom: 11px solid #fff
+		&::before
+			position: absolute
+			z-index: 3
+			top: -91px
+			left: 197px
+			width: 10px
+			height: 680px
+			+rotate(35)
+			content: ''
+			background: #fff
+		&::after
+			position: absolute
+			z-index: 3
+			bottom: -84px
+			left: 194px
+			width: 10px
+			height: 680px
+			+rotate(-35)
+			content: ''
+			background: #fff
+		&-lines
+			&::before
+				position: absolute
+				z-index: 4
+				top: -91px
+				right: 196px
+				width: 10px
+				height: 680px
+				+rotate(-35)
+				content: ''
+				background: #fff
+			&::after
+				position: absolute
+				z-index: 4
+				bottom: -84px
+				right: 194px
+				width: 10px
+				height: 680px
+				+rotate(35)
+				content: ''
+				background: #fff
+			
+	&_has-triangle
+		position: relative
+		overflow: hidden
+		background: #dadada url('../img/bg/section-lines.png') no-repeat 0 -2px
+		&::before, &::after
+			position: absolute
+			right: -152px
+			z-index: 3
+			width: 0
+			height: 0
+			border-style: solid
+			content: ''
+		&::before
+			top: -250px
+			border-width: 374px 400px 374px 0
+			border-color: transparent #db1a2e transparent transparent
+			transform: rotate(145deg)
+		&::after
+			bottom: -250px
+			border-width: 374px 400px 374px 0
+			border-color: transparent #db1a2e transparent transparent
+			transform: rotate(215deg)
+	&_has-triangle-2
+		border-top: 16px solid #db1a2e
+		border-bottom: 16px solid #db1a2e
+		background: #f5f3f4 url('../img/bg/section-lines_2.png') no-repeat 50% 50%
+		&::before, &::after
+			right: -230px
+			border-width: 390px 470px 400px 0
+		.section__triangle
+			&::before
+				top: -176px
+			&::before, &::after
+				left: -166px
 	&_has-decor
 		position: relative
 		&::after
@@ -47,6 +148,7 @@
 			height: 160px
 			background: url(../img/bg/section_decor-bot.svg) no-repeat top center/cover
 			content: ''
+			
 .event
 	display: flex
 	flex-direction: column
@@ -151,3 +253,122 @@
 		text-decoration: none
 	span
 		display: block
+		
+.program
+	padding: 50px 0 0
+	&__top
+		padding: 60px 0 70px
+		background-color: #da2031
+	&__title
+		max-width: 1280px
+		padding: 0 10px
+		margin: 0 auto
+		+f('sacr', 64)
+		line-height: 1.1
+		text-transform: uppercase
+		text-align: center
+		color: #fff
+	&__item
+		display: flex
+		align-items: center
+		flex-direction: row
+		max-width: 1500px
+		height: 140px
+		margin: 7px auto 0
+		padding: 0 50px 0 145px
+		+f('cgb')
+		background: #fff
+		font-size: 0
+		&-date
+			width: 220px
+			margin-right: 40px
+			font-size: 36px
+		&-time
+			width: 200px
+			margin-right: 50px
+			font-size: 34px
+			color: #15061d
+		&-text
+			width: 840px
+			font-size: 24px
+			line-height: (32/24)
+			&_fs
+				font-size: 30px
+		
+.announce
+	position: relative
+	height: calc(1080px - 110px)
+	margin: 94px 0 0
+	background: #fff
+	&::before
+		position: absolute
+		left: 290px
+		bottom: 10px
+		z-index: 1
+		width: 366px
+		height: 118px
+		background: #9e9c9c url(../img/bg/section-lines_2.png) no-repeat -290px -950px
+		content: ''
+	&::after
+		position: absolute
+		left: 588px
+		z-index: 2
+		bottom: 10px
+		+arr(40, 40, #fff, tr)
+		content: ''
+		width: 0
+		height: 0
+		border-style: solid
+		border-width: 0 70px 120px 0
+		border-color: transparent #fff transparent transparent
+	&__in
+		max-width: 1380px
+		margin: 0 auto
+		padding: 0 20px 0 100px
+	&__time
+		position: relative
+		display: flex
+		justify-content: space-between
+		align-items: center
+		height: 240px
+		margin-bottom: 65px
+		font-size: 84px
+		white-space: nowrap
+		&::after
+			position: absolute
+			top: 0
+			z-index: 1
+			height: 100%
+			width: 772px
+			right: -200px
+			background: #9e9c9c
+			content: ''
+		&::before
+			position: absolute
+			top: 0
+			right: 432px
+			z-index: 2
+			width: 0
+			height: 0
+			border-style: solid
+			border-width: 240px 0 0 140px
+			border-color: transparent transparent transparent #fff
+			content: ''
+		&-date
+			width: 690px
+			+f('cgb')
+			color: #db1a2e
+			letter-spacing: .07em
+			text-transform: uppercase
+		&-hour
+			z-index: 2
+			color: #fff
+	&__title
+		margin-bottom: 80px
+		+f('cgb', 60, 70)
+	&__text
+		color: #11081b
+		font-size: 40px
+		line-height: 1.2
+		&:not(:last-child)
+			margin-bottom: 40px
